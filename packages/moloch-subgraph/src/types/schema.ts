@@ -11,6 +11,7 @@ import {
 
 export class Vote extends Entity {
   constructor(id: string) {
+    super();
     this.entries = new Array(0);
     this.set("id", Value.fromString(id));
   }
@@ -21,7 +22,7 @@ export class Vote extends Entity {
     assert(
       id.kind == ValueKind.STRING,
       "Cannot save Vote entity with non-string ID. " +
-        'Considering using .toHex() to convert the "id" to a string.'
+      'Considering using .toHex() to convert the "id" to a string.'
     );
     store.set("Vote", id.toString(), this);
   }
@@ -105,6 +106,7 @@ export class Vote extends Entity {
 
 export class Proposal extends Entity {
   constructor(id: string) {
+    super();
     this.entries = new Array(0);
     this.set("id", Value.fromString(id));
   }
@@ -115,7 +117,7 @@ export class Proposal extends Entity {
     assert(
       id.kind == ValueKind.STRING,
       "Cannot save Proposal entity with non-string ID. " +
-        'Considering using .toHex() to convert the "id" to a string.'
+      'Considering using .toHex() to convert the "id" to a string.'
     );
     store.set("Proposal", id.toString(), this);
   }
@@ -298,6 +300,7 @@ export class Proposal extends Entity {
 
 export class Applicant extends Entity {
   constructor(id: string) {
+    super()
     this.entries = new Array(0);
     this.set("id", Value.fromString(id));
   }
@@ -308,7 +311,7 @@ export class Applicant extends Entity {
     assert(
       id.kind == ValueKind.STRING,
       "Cannot save Applicant entity with non-string ID. " +
-        'Considering using .toHex() to convert the "id" to a string.'
+      'Considering using .toHex() to convert the "id" to a string.'
     );
     store.set("Applicant", id.toString(), this);
   }
@@ -437,6 +440,7 @@ export class Applicant extends Entity {
 
 export class Member extends Entity {
   constructor(id: string) {
+    super();
     this.entries = new Array(0);
     this.set("id", Value.fromString(id));
   }
@@ -447,7 +451,7 @@ export class Member extends Entity {
     assert(
       id.kind == ValueKind.STRING,
       "Cannot save Member entity with non-string ID. " +
-        'Considering using .toHex() to convert the "id" to a string.'
+      'Considering using .toHex() to convert the "id" to a string.'
     );
     store.set("Member", id.toString(), this);
   }
